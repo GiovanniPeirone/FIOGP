@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-languaje',
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './languaje.html',
-  styleUrl: './languaje.css'
+  styleUrl: './languaje.css',
 })
 export class Languaje {
+  selectedLanguage = 'es';
 
+  constructor() {
+    this.selectedLanguage = 'es';
+  }
 }
