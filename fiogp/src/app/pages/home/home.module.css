@@ -1,0 +1,140 @@
+.sectionInit{
+    width: 80%;
+    padding: 5%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.initTitle{
+    margin: 1%;
+    display: flex;
+    height: 300px;
+    align-items: center; /* Centra en eje Y */
+}
+
+.initTitle h1{
+    border-left: 10px solid #508C9B;
+    border-radius: 10px;
+    padding: 2%;
+    font-size: 4vh;
+    font-weight: 100;
+}
+
+.initTitle img{
+    height: 30vh;
+}
+
+.initDescription{
+    display: flex;
+    margin: 1%;
+}
+
+.initDescription p{
+    width: 50%;
+}
+
+.initDescription Video{
+    border-radius: 15px;
+    height: 30vh;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.3);
+    margin-left: 5%;
+}
+
+.initDecriptionMobile{
+    display: none;
+    width: 0%;
+    height: 0px;
+}
+
+.carruselIMG{
+    margin-top: 10%;
+}
+
+
+@media (max-width : 1000px){
+    .initTitle{
+        height: 100px;
+    }
+
+    .initTitle h1{
+        font-size: 1.5rem;
+        height: 100px;
+    }
+
+    .initTitle img{
+        height: 150px;
+        width: 150px;
+    }
+
+    .initDescription{
+        width: 100%;
+        display:inline;
+        align-items: center;
+    }
+
+    .initDescription p{
+        width: 100%;
+    }
+
+    .initDescription Video{
+        margin: auto;
+        height: 25vh;
+    }
+
+
+    .initDescription Video{
+        margin-left: 0%;
+        margin: 0%;
+    }
+    
+}
+
+@media (max-width : 700px){
+    .initTitle{
+        display:inline;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .initTitle h1{
+        font-size: 1.2rem;
+        font-weight: 100;
+        height: 100px;
+        border-left:none;
+        text-align: center;
+        border-top : 10px solid #508C9B;
+    }
+
+    .initTitle img{
+        height: 150px;
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        
+    }
+
+    .initDescription Video{
+        height: 150px;
+        border-radius: 10px;
+        margin-top:5%;
+    }
+
+    .initDescription{
+        padding: 0%;
+        margin: 0%;
+    }
+
+}
+
+
+
+/*Cer*/
+
+.sectionCertificates{
+    width: 80%;
+    margin: auto;
+    border: 1px solid #508C9B;
+    border-radius: 15px;
+    padding: 5%;
+}

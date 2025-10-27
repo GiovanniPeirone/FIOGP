@@ -1,0 +1,17 @@
+{
+    "header" : {
+
+    },
+    "footer" : {
+
+    },
+    "home": {
+        "init-part" : {
+            "title" : "IBERO-AMERICAN FORUM OF PROFESSIONAL GASTRONOMIC ORGANIZATIONS",
+            "description" : "We are an organization founded 27 years ago with the goal of raising the standard of food and beverage preparation, especially in the Americas. Our certification program is a combination of work experience and formal studies. It is taught by professionals with extensive academic and industry backgrounds. We project the Ibero-American Forum of Professional Gastronomic Organizations as an institution that trains and develops individuals committed to professionalization and society. Created in… More than 20,000 students and institutions certified throughout the continent. More than 12 certification levels. Presence in 17 countries across the Americas and Europe. Our certification is backed by the most important organization in the world and includes the ISO certification program. We invite you to be part of this program by contacting our representatives."
+        },
+        "sectionCertificates" : {
+            "title" : "Certificates"
+        }
+    }
+}
