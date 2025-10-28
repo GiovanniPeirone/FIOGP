@@ -1,15 +1,19 @@
 .sectionInit{
     width: 80%;
-    padding: 5%;
+    padding: 2%;
     margin: auto;
-    margin-top: 5%;
 }
 
 .initTitle{
-    margin: 1%;
+    margin: auto;
     display: flex;
     height: 300px;
     align-items: center; /* Centra en eje Y */
+}
+
+.conteinerInitSection{
+    margin: auto;
+    width: 100%;
 }
 
 .initTitle h1{
@@ -26,16 +30,21 @@
 
 .initDescription{
     display: flex;
+    font-size: 1.5rem;
+
     margin: 1%;
 }
 
 .initDescription p{
     width: 50%;
+    
 }
 
 .initDescription Video{
+    position:absolute;
+    right: 10%;
     border-radius: 15px;
-    height: 30vh;
+    height: 40vh;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.3);
     margin-left: 5%;
 }
@@ -49,6 +58,27 @@
 .carruselIMG{
     margin-top: 10%;
 }
+
+.textoLimitado{
+    display: none;
+}
+
+@media (max-width : 1560px){
+    .initDescription Video{
+
+        height: 30vh;
+       
+    }
+}
+
+@media (max-width : 1460px){
+    .initDescription Video{
+
+        height: 28vh;
+       
+    }
+}
+
 
 
 @media (max-width : 1000px){
@@ -79,14 +109,19 @@
     .initDescription Video{
         margin: auto;
         height: 25vh;
+     
     }
 
 
     .initDescription Video{
+
         margin-left: 0%;
-        margin: 0%;
+        margin-top: 5%;
     }
     
+    .carruselIMG{
+        margin-top: 50%;
+    }
 }
 
 @media (max-width : 700px){
@@ -125,6 +160,21 @@
         margin: 0%;
     }
 
+    .textLong{
+        display: none;
+    }
+
+    .textoLimitado{
+        display: block;
+    }
+
+    .initDescription Video{
+        margin-top: 6%;
+    }
+
+    .carruselIMG{
+        margin-top: 70%;
+    }
 }
 
 
@@ -138,3 +188,88 @@
     border-radius: 15px;
     padding: 5%;
 }
+
+.CertificatesClass{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    padding: 1%;
+}
+
+.CertificatesClass div {
+    
+    width: 100%;
+    margin: auto;
+    
+    text-align: center;
+}
+
+.CertificatesClass div img {
+    margin: auto;
+}
+
+.CertificatesClass h1 {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+
+.CertificatesClass div h1 {
+    margin: auto;
+    align-items: center;
+    border: 1px solid #508C9B;
+    padding: 5%;
+    border-radius: 15px;
+    height: 30px;
+    width: 85%;
+}
+
+.certificatesVideo{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificatesVideo Video{
+    margin: 0 auto;
+    display: block;
+    margin-top: 5%;
+}
+
+@media (max-width : 1560px){
+    .CertificatesClass{
+        display: inline;
+    }
+
+    .CertificatesClass div{
+        margin-top: 5%;
+    }
+
+    .CertificatesClass h1 {
+        font-size: 1.3rem;
+        font-weight: 100;
+    }
+
+    
+
+    .CertificatesClass div h1 {
+        margin: auto;
+        align-items: center;
+        border: 1px solid #508C9B;
+        padding: 5%;
+        border-radius: 15px;
+        height: 20px;
+        width: 85%;
+    }
+
+    .certificatesVideo Video{
+        height: 20vh;
+    }
+}
+
+@media (max-width : 800px){
+    .CertificatesClass div img {
+        height: 9rem;
+    }
+}
+

@@ -1,3 +1,5 @@
+import styles from './video.module.css'
+
 
 type Video = {
     videoPath : string
@@ -5,7 +7,7 @@ type Video = {
 
 export default function Video({videoPath} : Video){
     return (
-        <video src={videoPath} controls>
+        <video src={videoPath} className={styles.video} controls>
             <source src={videoPath} type="video.mp4"/>
             Your browser does not support the video.
         </video>
