@@ -22,7 +22,7 @@ export default function MoreLess({ text, limit, comeBack }: TextProps) {
           onClick={toggleMostrar}
           
         >
-          <a href={comeBack} style={{ color: "rgba(77, 77, 77, 1)", cursor: "pointer", marginLeft: "5px", textDecoration: "none", }}>{mostrarMas ? "Mostrar menos" : "Mostrar más"}</a>
+          <a href={comeBack} style={{ color: "rgba(77, 77, 77, 1)", cursor: "pointer", marginLeft: "5px", }}>{mostrarMas ? "Mostrar menos" : "Mostrar más"}</a>
         </span>
       )}
     </p>

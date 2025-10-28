@@ -1,0 +1,129 @@
+.footer {
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ==== SECCIÓN SUPERIOR ==== */
+.topFooter {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  padding: 6rem 2rem 3rem;
+}
+
+/* SVG como fondo */
+.svgBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transform: rotate(0deg); /* 🔥 Asegura que no esté girado */
+}
+
+/* Contenido del footer */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* Redes sociales */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.socials img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.1);
+}
+
+.langWrapper {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* ==== PARTE INFERIOR ==== */
+.bottomFooter {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.brand {
+  color: #508C9B;
+  font-weight: bold;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .logo {
+    width: 90px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .socials img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .topFooter {
+    padding: 5rem 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topFooter {
+    padding: 4rem 1rem 1.5rem;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .socials {
+    gap: 1rem;
+  }
+
+  .socials img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bottomFooter {
+    font-size: 0.8rem;
+  }
+}

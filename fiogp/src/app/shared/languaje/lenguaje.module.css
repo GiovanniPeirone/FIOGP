@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.selectLenguaje{
+    background: none;
+    border: none;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+.selectLenguaje option{
+    background-color: black;
+    border: none;
+}
+
+.selectLenguaje:hover {
+    color: #81e6ff;
+}
+

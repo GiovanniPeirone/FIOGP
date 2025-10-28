@@ -1,0 +1,46 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: transparent; /* cambiá si querés fondo */
+  padding: 10px 0;
+  background-color: #508C9B;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite; /* velocidad */
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* espacio entre banderas */
+}
+
+.items img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.items img:hover {
+  transform: scale(1.1);
+}
+
+/* 🔁 Movimiento continuo */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 💡 Pausa opcional al pasar el mouse */
+.track:hover {
+  animation-play-state: paused;
+}

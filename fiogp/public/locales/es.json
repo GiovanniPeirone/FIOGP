@@ -16,6 +16,21 @@
             "restaurantes" : "Restaurantes Certificados",
             "escuelas" : "Escuelas Certificadas",
             "description" : "La certificación que se ofrece en el El Salvador es a través del Instituto Superior de Gastronomía Internacional Les Arts Culinaires By Arnaud Guerpillon."
+        },
+        "representantes" : {
+            "title" : "Nuestros Representantes"
+        },
+        "contactus" : {
+            "title" : "Contactanos",
+            "data" : {
+                "name" : "Nombre",
+                "lastname" : "Apellido",
+                "email" : "email",
+                "message" : "Mensaje",
+                "send" : "Enviar Mensaje",
+                "response" : "Estaras reviviendo una respuesta pronto"
+            }
         }
+
     }
 }

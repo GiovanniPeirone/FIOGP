@@ -1,5 +1,7 @@
 "use client";
 
+import styles from './lenguaje.module.css'
+
 import { useLanguage } from "@/app/LanguajeContext";
 
 export default function Languaje(){
@@ -9,7 +11,7 @@ export default function Languaje(){
         <select
         value={lang}
         onChange={(e) => setLang(e.target.value)}
-        className="p-2 rounded border border-gray-300"
+        className={styles.selectLenguaje}
         >
         <option value="es">Español</option>
         <option value="en">English</option>

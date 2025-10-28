@@ -5,10 +5,10 @@ import { useLanguage } from "@/app/LanguajeContext";
 import styles from './home.module.css'
 
 import Video from "@/app/shared/video/video";
-import Carrusel from "@/app/shared/carrusel/carrusel";
+import Carrusel from "@/app/pages/home/carrusel/carrusel";
 import Title from "@/app/shared/titles/title";
-import MoreLess from "@/app/shared/textMoreLess/MoreLess";
-
+import MoreLess from "@/app/pages/home/textMoreLess/MoreLess";
+import { Marquee } from './paises/paises'
 
 export default function InitSection(){
     const { t } = useLanguage();
@@ -21,7 +21,7 @@ export default function InitSection(){
 
 
     return(
-        <main>
+        <main className={styles.main}>
             <section className={styles.sectionInit} id="init">
                 <div className={styles.conteinerInitSection}>
                     <div className={styles.initTitle}>
@@ -59,19 +59,36 @@ export default function InitSection(){
                 <p>{t("home.sectionCertificates.description")}</p>
                 <div className={styles.certificatesVideo}>
                     <Video videoPath="/videos/video1-BPCDhCUD.mp4"/>
+                    <a href="">Ver Mas sobre nuestra oferta academica</a>
                 </div>
             </section>
-            <section>
-                <Title title="asd" />
+            <section className={styles.NuestrosRepresentantesSection}>
+                <div className={styles.titleREpresentrants}>
+                    <Title title={t("home.representantes.title")} />
+                </div>
+                <div className={styles.RepresntantsDesktop}>
+                    <img src="Respresentantes.svg" alt="Respresentantes.svg" />
+                </div>
+                <div className={styles.RepresntantsMobile}>
+                    <Marquee />
+                </div>
             </section>
-            <section>
-                <Title title="asd" />
-            </section>
-            <section>
-                <Title title="asd" />
-            </section>
-            <section>
-                <Title title="asd" />
+            <section className={styles.ContactUs}>
+                <Title title={t("home.contactus.title")} />
+                <div className={styles.contactusContainer}>
+                    <div>
+                        <form action="" className={styles.ContactForm}>
+                            <input type="text" placeholder={t("home.contactus.data.name")}/>
+                            <input type="text" placeholder={t("home.contactus.data.lastname")}/>
+                            <input type="text" placeholder={t("home.contactus.data.email")}/>
+                            <textarea name="" id="" placeholder={t("home.contactus.data.message")}></textarea>
+                            <button>{t("home.contactus.data.send")}</button>
+                        </form>
+                    </div>
+                    <div className={styles.contactusImg}>
+                        <img src="/img/img4-CyxJUPJO 1.png" alt="contact-img" height={500}/>
+                    </div>
+                </div>
             </section>
         </main>
     );
