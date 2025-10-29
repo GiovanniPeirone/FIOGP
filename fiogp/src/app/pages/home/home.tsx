@@ -36,7 +36,7 @@ export default function InitSection(){
                         <Video videoPath="/videos/CHEF-GUSTAVO-GRACIANO-T_u2ll-R.mp4"/>
                     </div>
                     <div className={styles.carruselIMG}>
-                        <Carrusel imgs={carruselIMG } />
+                        <Carrusel />
                     </div>
                 </div>
             </section>
