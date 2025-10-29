@@ -1,97 +1,81 @@
-"use client"
+import React from "react";
+import styles from "./home.module.css";
 
+export const Home: React.FC = () => {
+  return (
+    <div className={styles.home}>
+      {/* Header */}
+      <header className={styles.header}>
+        <h1>
+          FORO IBEROAMERICANO DE ORGANIZACIONES GASTRONÓMICAS PROFESIONALES
+        </h1>
+        <img src="/img/logo.png" alt="Logo Foro" className={styles.logo} />
+      </header>
 
-import { useLanguage } from "@/app/LanguajeContext";
-import styles from './home.module.css'
+      {/* Introducción */}
+      <section className={styles.intro}>
+        <img src="/img/director.jpg" alt="Director" className={styles.introImg} />
+        <div className={styles.introText}>
+          <h3>Organización con 27 años de trayectoria</h3>
+          <p>
+            Buscamos elevar el estándar de la preparación de alimentos y bebidas
+            en América y Europa. Nuestro programa combina experiencia laboral y
+            estudios formales, dictados por profesionales de amplia trayectoria.
+          </p>
+        </div>
+      </section>
 
-import Video from "@/app/shared/video/video";
-//import Carrusel from "@/app/pages/home/carrusel/carrusel";
-import Title from "@/app/shared/titles/title";
-import MoreLess from "@/app/pages/home/textMoreLess/MoreLess";
-import { Marquee } from './paises/paises'
+      {/* Certificados */}
+      <section className={styles.certificados}>
+        <h2>Certificados</h2>
+        <p className={styles.subtitulo}>Más de 30 provincias con certificación</p>
 
-export default function InitSection(){
-    const { t } = useLanguage();
-    
-    const carruselIMG = [
-        "img1",
-        "img2",
-        "img3"
-    ]
+        <div className={styles.certificadosLista}>
+          <div className={styles.certificadoItem}>
+            <img src="/img/icon-chef.png" alt="Chefs" />
+            <p>Chefs Certificados</p>
+          </div>
+          <div className={styles.certificadoItem}>
+            <img src="/img/icon-restaurant.png" alt="Restaurantes" />
+            <p>Restaurantes Certificados</p>
+          </div>
+          <div className={styles.certificadoItem}>
+            <img src="/img/icon-school.png" alt="Escuelas" />
+            <p>Escuelas Certificadas</p>
+          </div>
+        </div>
 
+        <div className={styles.certificadosExtra}>
+          <img src="/img/evento.jpg" alt="Evento" />
+          <p>
+            Viví más sobre nuestras <br />
+            ofertas académicas.
+          </p>
+        </div>
+      </section>
 
-    return(
-        <main className={styles.main}>
-            <section className={styles.sectionInit} id="init">
-                <div className={styles.conteinerInitSection}>
-                    <div className={styles.initTitle}>
-                        <img src="icon.png" alt="icon" />
-                        <h1>{t("home.init-part.title")}</h1>
-                    </div>
-                    <div className={styles.initDescription}>
-                        <div className={styles.textoLimitado}>
-                            <MoreLess text={t("home.init-part.description")} limit={146} comeBack="#init"/>
-                        </div>
-                        <p className={styles.textLong}>{t("home.init-part.description")}</p>
-                        <Video videoPath="/videos/CHEF-GUSTAVO-GRACIANO-T_u2ll-R.mp4"/>
-                    </div>
-                    <div className={styles.carruselIMG}>
-                        
-                    </div>
-                </div>
-            </section>
-            <section className={styles.sectionCertificates}>
-                <Title title={t("home.sectionCertificates.title")} />
-                <div className={styles.CertificatesClass}>
-                    <div>
-                        <img src="/img/certificates/gorro-_Q6GY_n2 1.png" alt="gorroo" />
-                        <h1>{t("home.sectionCertificates.chefs")}</h1>
-                    </div>
-                    <div>
-                        <img src="/img/certificates/comida-DY2fm2Po 1.png" alt="escuelas" />
-                        <h1>{t("home.sectionCertificates.restaurantes")}</h1>
-                    </div>
-                    <div>
-                        <img  src="/img/certificates/insti-DskXLeRN 1.png" alt="restaurantes" />
-                        <h1>{t("home.sectionCertificates.escuelas")}</h1>
-                    </div>
-                </div>
-                <p>{t("home.sectionCertificates.description")}</p>
-                <div className={styles.certificatesVideo}>
-                    <Video videoPath="/videos/video1-BPCDhCUD.mp4"/>
-                    <a href="">Ver Mas sobre nuestra oferta academica</a>
-                </div>
-            </section>
-            <section className={styles.NuestrosRepresentantesSection}>
-                <div className={styles.titleREpresentrants}>
-                    <Title title={t("home.representantes.title")} />
-                </div>
-                <div className={styles.RepresntantsDesktop}>
-                    <img src="Respresentantes.svg" alt="Respresentantes.svg" />
-                </div>
-                <div className={styles.RepresntantsMobile}>
-                    <Marquee />
-                </div>
-            </section>
-            <section className={styles.ContactUs}>
-                <Title title={t("home.contactus.title")} />
-                <div className={styles.contactusContainer}>
-                    <div>
-                        <form action="" className={styles.ContactForm}>
-                            <input type="text" placeholder={t("home.contactus.data.name")}/>
-                            <input type="text" placeholder={t("home.contactus.data.lastname")}/>
-                            <input type="text" placeholder={t("home.contactus.data.email")}/>
-                            <textarea name="" id="" placeholder={t("home.contactus.data.message")}></textarea>
-                            <button>{t("home.contactus.data.send")}</button>
-                        </form>
-                    </div>
-                    <div className={styles.contactusImg}>
-                        <img src="/img/img4-CyxJUPJO 1.png" alt="contact-img" height={500}/>
-                    </div>
-                </div>
-            </section>
-        </main>
-    );
-}
+      {/* Representantes */}
+      <section className={styles.representantes}>
+        <h2>Nuestros Representantes</h2>
+        <p>Presencia en 17 países de América y Europa</p>
+        <img src="/img/mapa.png" alt="Mapa de representantes" className={styles.mapa} />
+      </section>
 
+      {/* Contacto */}
+      <section className={styles.contacto}>
+        <form className={styles.form}>
+          <div className={styles.formRow}>
+            <input type="text" placeholder="Nombre" className={styles.input} />
+            <input type="text" placeholder="Apellido" className={styles.input} />
+          </div>
+          <input type="email" placeholder="Email" className={styles.input} />
+          <textarea placeholder="Mensaje" className={styles.textarea}></textarea>
+          <button type="submit" className={styles.button}>Enviar Mensaje</button>
+        </form>
+        <img src="/img/contacto.jpg" alt="Contacto" className={styles.contactoImg} />
+      </section>
+    </div>
+  );
+};
 
+export default Home;

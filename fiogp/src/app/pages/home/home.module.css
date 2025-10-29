@@ -1,450 +1,184 @@
-.main{
-    padding-top: 7%;
+.home {
+  font-family: "Poppins", sans-serif;
+  color: #0d1b2a;
+  line-height: 1.5;
 }
 
-.sectionInit{
-    width: 80%;
-    padding: 2%;
-    margin: auto;
-
+/* Header */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-.initTitle{
-    margin: auto;
-    display: flex;
-    height: 300px;
-    align-items: center; /* Centra en eje Y */
+.header h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #003366;
 }
 
-.conteinerInitSection{
-    margin: auto;
+.logo {
+  width: 100px;
+  margin-top: 1rem;
+}
+
+/* Intro */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.introImg {
+  width: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.introText {
+  max-width: 400px;
+}
+
+.introText h3 {
+  color: #004c80;
+  margin-bottom: 0.5rem;
+}
+
+/* Certificados */
+.certificados {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.certificados h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  color: #007b83;
+  margin-bottom: 1.5rem;
+}
+
+.certificadosLista {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.certificadoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificadoItem img {
+  width: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.certificadosExtra {
+  margin-top: 2rem;
+}
+
+.certificadosExtra img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.certificadosExtra p {
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+/* Representantes */
+.representantes {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.representantes h2 {
+  margin-bottom: 0.5rem;
+}
+
+.mapa {
+  width: 90%;
+  max-width: 700px;
+  margin-top: 1rem;
+}
+
+/* Contacto */
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem 4rem;
+  background-color: #f9fafc;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.button {
+  background-color: #007b83;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #005f66;
+}
+
+.contactoImg {
+  width: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+
+  .introImg {
     width: 100%;
-}
+    max-width: 300px;
+  }
 
-.initTitle h1{
-    border-left: 10px solid #508C9B;
-    border-radius: 10px;
-    padding: 2%;
-    font-size: 4vh;
-    font-weight: 100;
-}
+  .certificadosLista {
+    gap: 1.5rem;
+  }
 
-.initTitle img{
-    height: 30vh;
-}
-
-.initDescription{
-    display: flex;
-    font-size: 1.5rem;
-
-    margin: 1%;
-}
-
-.initDescription p{
-    width: 50%;
-    
-}
-
-.initDescription Video{
-    position:absolute;
-    right: 10%;
-    border-radius: 15px;
-    height: 40vh;
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.3);
-    margin-left: 5%;
-}
-
-.initDecriptionMobile{
-    display: none;
-    width: 0%;
-    height: 0px;
-}
-
-.carruselIMG{
-    margin-top: 10%;
-}
-
-.textoLimitado{
-    display: none;
-}
-
-@media (max-width : 1560px){
-    .initDescription Video{
-
-        height: 30vh;
-       
-    }
-}
-
-@media (max-width : 1460px){
-    .initDescription Video{
-
-        height: 28vh;
-       
-    }
-}
-
-@media (max-width : 1300px){
-
-    .main{
-        padding-top: 10%;
-    }
-
-    .initDescription{
-        font-size: 1rem;
-    }
-}
-
-@media (max-width : 1000px){
-
-    .main{
-        padding-top: 12%;
-    }
-
-    .initTitle{
-        height: 100px;
-    }
-
-    .initTitle h1{
-        font-size: 1.5rem;
-        height: 100px;
-    }
-
-    .initTitle img{
-        height: 150px;
-        width: 150px;
-    }
-
-    .initDescription{
-        width: 100%;
-        display:inline;
-        align-items: center;
-    }
-
-    .initDescription p{
-        width: 100%;
-    }
-
-    .initDescription Video{
-        margin: auto;
-        height: 25vh;
-     
-    }
-
-
-    .initDescription Video{
-
-        margin-left: 0%;
-        margin-top: 5%;
-    }
-    
-    .carruselIMG{
-        margin-top: 50%;
-    }
-}
-
-@media (max-width : 700px){
-
-    .main{
-        padding-top: 20%;
-    }
-
-
-    .initTitle{
-        display:inline;
-        height: 100px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .initTitle h1{
-        font-size: 1.2rem;
-        font-weight: 500;
-        height: 100px;
-        text-align: center;
-        
-        border-left:none;
-        border-top : 10px solid #508C9B;
-        
-    }
-    
-    .initTitle img{
-        height: 150px;
-        width: 150px;
-        display: block;
-        margin: 0 auto;
-        
-    }
-
-    .initDescription Video{
-        height: 150px;
-        border-radius: 10px;
-        margin-top:5%;
-    }
-
-    .initDescription{
-        padding: 0%;
-        margin: 0%;
-    }
-
-    .textLong{
-        display: none;
-    }
-
-    .textoLimitado{
-        display: block;
-    }
-
-    .textoLimitado p{
-        font-size: 1.2rem;
-    }
-
-    .initDescription Video{
-        margin-top: 6%;
-    }
-
-    .carruselIMG{
-        margin-top: 70%;
-    }
-}
-
-
-
-/*Cer*/
-
-.sectionCertificates{
-    width: 80%;
-    margin: auto;
-    border: 1px solid #508C9B;
-    border-radius: 15px;
-    padding: 5%;
-}
-
-.CertificatesClass{
+  .mapa {
     width: 100%;
-    display: flex;
-    margin: auto;
-    padding: 1%;
-}
-
-.CertificatesClass div {
-    
-    width: 100%;
-    margin: auto;
-    
-    text-align: center;
-}
-
-.CertificatesClass div img {
-    margin: auto;
-}
-
-.CertificatesClass h1 {
-    font-size: 2rem;
-    font-weight: 100;
-}
-
-
-.CertificatesClass div h1 {
-    margin: auto;
-    align-items: center;
-    border: 1px solid #508C9B;
-    padding: 5%;
-    border-radius: 15px;
-    height: 30px;
-    width: 85%;
-}
-
-.certificatesVideo{
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.certificatesVideo Video{
-    margin: 0 auto;
-    display: block;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.certificatesVideo a{
-    
-    color: #508C9B;
-}
-
-@media (max-width : 1500px){
-    .CertificatesClass h1 {
-        font-size: 1.5rem;
-        font-weight: 100;
-    }
-    
-}
-
-@media (max-width : 1200px){
-    .CertificatesClass{
-        display: inline;
-    }
-
-    .CertificatesClass div{
-        margin-top: 5%;
-    }
-
-    .CertificatesClass h1 {
-        font-size: 1rem;
-        font-weight: 100;
-    }
-
-    
-
-    .CertificatesClass div h1 {
-        margin: auto;
-        align-items: center;
-        border: 1px solid #508C9B;
-        padding: 5%;
-        border-radius: 15px;
-        height: 20px;
-        width: 85%;
-    }
-
-  
-
-    .certificatesVideo Video{
-        height: 20vh;
-    }
-}
-
-@media (max-width : 1000px){
-    .CertificatesClass div img {
-        height: 8rem;
-    }
-}
-
-@media (max-width : 800px){
-    .CertificatesClass div img {
-        height: 5rem;
-    }
-}
-
-/*NuestrosRepresentantesSection*/
-
-
-.NuestrosRepresentantesSection{
-    margin-top: 10%;
-    align-items: center; /* Centra en eje Y */
-}
-
-.titleREpresentrants{
-    margin: 5%;
-    margin-bottom: 10%;
-}
-
-.RepresntantsDesktop img {
-    height: 50vh;
-    display: block;
-    margin: 5% auto;
-}
-
-.RepresntantsMobile{
-    display: none;
-}
-
-@media (max-width : 800px){
-    .RepresntantsDesktop{
-        display: none;
-    }
-
-    .RepresntantsMobile{
-        display: flex;
-    }
-}
-
-
-
-/*Contactanos*/ 
-.ContactUs{
-    margin-top: 10%;
-    padding: 5%;
-
-}
-
-.contactusContainer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.ContactForm{
-    display: inline;
-}
-
-.ContactForm input{
-    height: 50px;
-    width: 100%;
-    margin-top: 2%;
-    background: none;
-    border: none;
-    padding-left: 1%;
-
-    border-bottom: 1px solid #508C9B;
-}
-
-.ContactForm input:focus{
-    outline: none;
-    box-shadow: none; /* elimina cualquier sombra */
-}
-
-
-.ContactForm input::placeholder{
-    color: #508C9B;
-}
-
-.ContactForm textarea{
-    user-select: none;
-    outline: none;
-    margin-top: 5%;
-    border: none;
-    background: none;
-    border: none;
-    border-bottom: 1px solid #508C9B;
-    border-left: 1px solid #508C9B;
-    width: 100%;
-    height: 200px;
-    padding: 2%;
-}
-
-.ContactForm textarea:focus{
-    outline: none;
-    box-shadow: none; /* elimina cualquier sombra */
-}
-
-.ContactForm textarea::placeholder{
-    color: #508C9B;
-}
-
-.ContactForm button{
-    background-color: #508C9B;
-    border: none;
-    border-radius: 50px;
-    height: 50px;
-    width: 100%;
-    margin-top: 2%;
-    color: white;
-}
-
-.ContactForm button:hover{
-    background-color: #83e6ff;
-}
-
-.contactusImg{
-    margin: auto;
-}
-
-@media (max-width : 1000px){
-    .contactusImg{
-        display: none;
-    }
-
-    .contactusContainer{
-        display: inline;
-    }
+  }
 }
