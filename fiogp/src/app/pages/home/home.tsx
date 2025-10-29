@@ -5,7 +5,7 @@ import { useLanguage } from "@/app/LanguajeContext";
 import styles from './home.module.css'
 
 import Video from "@/app/shared/video/video";
-import Carrusel from "@/app/pages/home/carrusel/carrusel";
+//import Carrusel from "@/app/pages/home/carrusel/carrusel";
 import Title from "@/app/shared/titles/title";
 import MoreLess from "@/app/pages/home/textMoreLess/MoreLess";
 import { Marquee } from './paises/paises'
@@ -36,7 +36,7 @@ export default function InitSection(){
                         <Video videoPath="/videos/CHEF-GUSTAVO-GRACIANO-T_u2ll-R.mp4"/>
                     </div>
                     <div className={styles.carruselIMG}>
-                        <Carrusel />
+                        
                     </div>
                 </div>
             </section>
