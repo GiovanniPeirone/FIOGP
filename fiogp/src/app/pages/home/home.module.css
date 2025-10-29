@@ -236,6 +236,7 @@
 }
 
 .CertificatesClass div img {
+    height: 10rem;
     margin: auto;
 }
 
