@@ -1,56 +1,49 @@
-import React, { useState, useEffect } from "react";
-import styles from "./Carousel.module.css";
+"use client";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import styles from "./carrusel.module.css"; // 👈 Import del CSS module
 
 const images = [
-  "/img/paises/descarga.png",
-  "/img/paises/Flag_of_Mexico.png",
-  "/img/paises/peru-CuHSR9na.jfif",
-  "/img/paises/descarga (13).png",
-  "/img/paises/descarga (12).png",
+  "/img/fondo3-BBAzQlpe.png",
+  "/img/fondo6-DjrFhEzT.jpg",
+  "/img/foro2-CQA-e711.jpg",
 ];
 
-export const Carousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function Carousel() {
+  const [current, setCurrent] = useState(0);
 
-  // Cambia la imagen automáticamente cada 3 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextImage = () => setCurrentIndex((prev) => (prev + 1) % images.length);
-  const prevImage = () =>
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  const next = () => setCurrent((prev) => (prev + 1) % images.length);
+  const prev = () =>
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className={styles.carousel}>
-      <button className={styles.navButton} onClick={prevImage}>
-        ❮
-      </button>
-
-      <div className={styles.imageContainer}>
-        <img src={images[currentIndex]} alt="carousel" />
+    <div className={styles.carouselContainer}>
+      {/* Imagen */}
+      <div className={styles.carouselImage}>
+        <img src={images[current]} alt="imagen" />
       </div>
 
-      <button className={styles.navButton} onClick={nextImage}>
-        ❯
-      </button>
+      {/* Controles */}
+      <div className={styles.carouselControls}>
+        <button onClick={prev} className={styles.carouselBtn}>
+          <ChevronLeft width={24} height={20} />
+        </button>
 
-      <div className={styles.dots}>
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.dot} ${
-              index === currentIndex ? styles.active : ""
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
-        ))}
+        {/* Puntos indicadores */}
+        <div className={styles.carouselDots}>
+          {images.map((_, i) => (
+            <div
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`${styles.dot} ${i === current ? styles.active : ""}`}
+            />
+          ))}
+        </div>
+
+        <button onClick={next} className={styles.carouselBtn}>
+          <ChevronRight  width={24} height={20}/>
+        </button>
       </div>
     </div>
   );
-};
-
-export default Carousel;
+}

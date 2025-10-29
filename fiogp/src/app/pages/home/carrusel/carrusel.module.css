@@ -1,85 +1,76 @@
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.imageContainer {
+.carouselContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 300px;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
 }
 
-.imageContainer img {
+/* Imagen principal */
+.carouselImage {
+  width: 100%;
+  height: 30ch;
+  background-color: #e05b57; /* rojo */
+  border: 2px solid #3498ff; /* azul */
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.5s ease;
 }
 
-.navButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.3em 0.6em;
-  border-radius: 50%;
-  transition: background 0.3s;
-}
-
-.navButton:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.navButton:first-of-type {
-  left: 10px;
-}
-
-.navButton:last-of-type {
-  right: 10px;
-}
-
-.dots {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
+/* Controles */
+.carouselControls {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Botones */
+.carouselBtn {
+  background-color: #4b8892;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carouselBtn:hover {
+  background-color: #3e737c;
+}
+
+/* Puntos */
+.carouselDots {
+  display: flex;
+  gap: 0.75rem;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
-  background: #ddd;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(75, 136, 146, 0.6);
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
-.dot:hover,
-.dot.active {
-  background: #508c9b;
+.dot:hover {
+  background-color: rgba(75, 136, 146, 0.8);
 }
 
-/* ✅ Responsive */
-@media (max-width: 768px) {
-  .carousel {
-    max-width: 90%;
-  }
-  .imageContainer {
-    height: 200px;
-  }
-  .navButton {
-    font-size: 1.5rem;
-  }
+.active {
+  background-color: #4b8892;
+  transform: scale(1.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
