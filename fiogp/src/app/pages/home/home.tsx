@@ -1,6 +1,5 @@
 "use client"
 
-
 import { useLanguage } from "@/app/LanguajeContext";
 import styles from './home.module.css'
 
@@ -25,10 +24,8 @@ export default function InitSection(){
             <section className={styles.sectionInit} id="init">
                 <div className={styles.conteinerInitSection}>
                     <div className={styles.initTitle}>
-
                         <img src="icon.png" alt="icon" />
                         <h1>{t("home.init-part.title")}</h1>
-   
                     </div>
                     <div className={styles.initDescription}>
                         <div className={styles.textoLimitado}>
@@ -58,15 +55,26 @@ export default function InitSection(){
                         <h1>{t("home.sectionCertificates.escuelas")}</h1>
                     </div>
                 </div>
-                <p>{t("home.sectionCertificates.description")}</p>
                 <div className={styles.certificatesVideo}>
-                    <Video videoPath="/videos/video1-BPCDhCUD.mp4"/>
-                    <a href="">Ver Mas sobre nuestra oferta academica</a>
+                    <div >
+                        <Video videoPath="/videos/video1-BPCDhCUD.mp4"/>
+                    </div>
+                    <div className={styles.moredescriptionsertificados}>
+                        <div>
+                            <p>{t("home.sectionCertificates.description")}</p>
+                        </div>
+                        <div>
+                            <a href="">Ver Mas sobre nuestra oferta academica</a>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className={styles.NuestrosRepresentantesSection}>
                 <div className={styles.titleREpresentrants}>
                     <Title title={t("home.representantes.title")} />
+                </div>
+                <div className={styles.cantidadDeEStudiantesContennedor }>
+                    <h1 className={styles.cantidadDeEStudiantes}>{t("home.representantes.subtitle")}</h1>
                 </div>
                 <div className={styles.RepresntantsDesktop}>
                     <img src="Respresentantes.svg" alt="Respresentantes.svg" />

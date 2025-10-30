@@ -257,15 +257,35 @@
 }
 
 .certificatesVideo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    align-items: center;
+    
+}
+
+.moredescriptionsertificados{
+    padding: 5%;
+}
+
+.moredescriptionsertificados p {
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+.moredescriptionsertificados a{
     justify-content: center;
+    font-size: 1.5rem;
+}
+
+.moredescriptionsertificados div{
+    margin-top: 5%;
 }
 
 .certificatesVideo Video{
     margin: 0 auto;
     display: block;
     margin-top: 5%;
+    height: 40ch;
     margin-bottom: 5%;
 }
 
@@ -280,6 +300,30 @@
         font-weight: 100;
     }
     
+}
+
+@media (max-width : 1000px){
+    .certificatesVideo{
+        display: inline;
+        width: 100%;
+        
+    }
+
+    .moredescriptionsertificados div{
+        padding: 1%;
+        margin-top: 1%;
+    }
+
+    .moredescriptionsertificados p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .moredescriptionsertificados a{
+        font-size: 1.2rem;
+    }
+
+
 }
 
 @media (max-width : 1200px){
@@ -335,13 +379,32 @@
     align-items: center; /* Centra en eje Y */
 }
 
+
+.cantidadDeEStudiantesContennedor{
+    margin: 3% auto;
+    width: 50%;
+    text-align: center;
+}
+
+.cantidadDeEStudiantes{
+    color: white;
+    background-color: #508C9B;
+    padding: 1%;
+    max-width: 100%;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
 .titleREpresentrants{
-    margin: 5%;
-    margin-bottom: 10%;
+    margin: 10%;
+    margin-bottom: 0%;
 }
 
 .RepresntantsDesktop img {
-    height: 50vh;
+    height: 50ch;
     display: block;
     margin: 5% auto;
 }
@@ -356,15 +419,27 @@
     }
 
     .RepresntantsMobile{
+        margin-top: 5%;
         display: flex;
     }
+
+    .cantidadDeEStudiantesContennedor{
+        margin-top: 5%;
+        width: 90%;
+    }
+
+    .cantidadDeEStudiantes{
+        font-size: 1.2rem;
+        
+    }
+
 }
 
 
 
 /*Contactanos*/ 
 .ContactUs{
-    margin-top: 10%;
+    margin-top: 0%;
     padding: 5%;
 
 }
@@ -448,4 +523,10 @@
     .contactusContainer{
         display: inline;
     }
+
+    .ContactUs{
+        margin: 5%;
+    }
+
+
 }

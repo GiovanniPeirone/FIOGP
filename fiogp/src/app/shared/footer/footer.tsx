@@ -1,8 +1,14 @@
-import React from "react";
-import styles from "./footer.module.css";
+"use client"
+
 import Languaje from "../languaje/languaje";
+import { useLanguage } from "@/app/LanguajeContext";
+
+import styles from "./footer.module.css";
+
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className={styles.footer}>
       {/* Parte superior con SVG curvo */}
@@ -42,7 +48,7 @@ export default function Footer() {
       {/* Parte inferior con derechos */}
       <div className={styles.bottomFooter}>
         <p>
-          © 2024 <span className={styles.brand}>CERIX</span> – Todos los derechos reservados
+          © 2024 <span className={styles.brand}>CERIX</span> – {t("footer.righs")}
         </p>
       </div>
     </footer>
