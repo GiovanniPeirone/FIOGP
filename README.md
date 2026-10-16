@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IBERO-AMERICAN FORUM OF PROFESSIONAL GASTRONOMIC ORGANIZATIONS
+
+This is a demo landing page for the IBERO-AMERICAN FORUM OF PROFESSIONAL GASTRONOMIC ORGANIZATIONS, project never get to production
+
 
 ## Getting Started
 
